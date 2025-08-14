@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-gray-900 font-medical;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-medical {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #0d9488 100%);
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #3b82f6 100%);
+  }
+
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-medical-blue to-care-teal bg-clip-text text-transparent;
+  }
+
+  .text-gradient-red {
+    @apply bg-gradient-to-r from-heart-red to-medical-accent bg-clip-text text-transparent;
+  }
+
+  .shadow-medical {
+    box-shadow:
+      0 20px 25px -5px rgba(30, 64, 175, 0.1),
+      0 10px 10px -5px rgba(30, 64, 175, 0.04);
+  }
+
+  .shadow-medical-lg {
+    box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
+  }
+}
